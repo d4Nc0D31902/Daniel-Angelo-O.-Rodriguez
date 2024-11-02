@@ -46,7 +46,7 @@ const App = () => {
         {/* Profile Pic */}
         <div className="bg-white md:col-span-1 md:row-span-4 rounded-lg flex justify-center items-center shadow-2xl sm:col-span-1 sm:row-span-2">
           <img
-            src="./src/assets/dan1.JPG"
+            src="./src/assets/dan1.jpg"
             alt="Portfolio"
             className="w-full h-full object-cover rounded-lg"
           />
