@@ -94,7 +94,7 @@ const App = () => {
                 <Button
                   type="primary"
                   icon={<DownloadOutlined />}
-                  href="./src/assets/Resume.pdf"
+                  href="../images/Resume.pdf"
                   download
                   className="flex items-center gap-2 text-sm sm:text-base px-4 py-2"
                   style={{ backgroundColor: "#52c41a", borderColor: "#52c41a" }}
@@ -117,7 +117,7 @@ const App = () => {
                 <Button
                   type="primary"
                   icon={<DownloadOutlined />}
-                  href="./src/assets/Resume.pdf"
+                  href="../images/Resume.pdf"
                   download
                   className="flex items-center justify-center rounded-full p-2"
                   style={{ backgroundColor: "#52c41a", borderColor: "#52c41a" }}
