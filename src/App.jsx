@@ -7,35 +7,35 @@ import { MailOutlined, DownloadOutlined } from "@ant-design/icons";
 const App = () => {
   const isNotSmallScreen = useMediaQuery({ minWidth: 768 });
   const items = [
-    { src: "./src/assets/mongodb.png", alt: "MongoDB logo", text: "MongoDB" },
+    { src: "../images/mongodb.png", alt: "MongoDB logo", text: "MongoDB" },
     {
-      src: "./src/assets/express.png",
+      src: "../images/express.png",
       alt: "ExpressJS logo",
       text: "ExpressJS",
     },
-    { src: "./src/assets/react.png", alt: "ReactJS logo", text: "ReactJS" },
-    { src: "./src/assets/node.png", alt: "NodeJS logo", text: "NodeJS" },
-    { src: "./src/assets/php.png", alt: "PHP logo", text: "PHP" },
-    { src: "./src/assets/laravel.png", alt: "Laravel logo", text: "Laravel" },
-    { src: "./src/assets/html.png", alt: "HTML logo", text: "HTML" },
-    { src: "./src/assets/css.png", alt: "CSS logo", text: "CSS" },
+    { src: "../images/react.png", alt: "ReactJS logo", text: "ReactJS" },
+    { src: "../images/node.png", alt: "NodeJS logo", text: "NodeJS" },
+    { src: "../images/php.png", alt: "PHP logo", text: "PHP" },
+    { src: "../images/laravel.png", alt: "Laravel logo", text: "Laravel" },
+    { src: "../images/html.png", alt: "HTML logo", text: "HTML" },
+    { src: "../images/css.png", alt: "CSS logo", text: "CSS" },
     {
-      src: "./src/assets/javascript.png",
+      src: "../imagess/javascript.png",
       alt: "JavaScript logo",
       text: "JavaScript",
     },
     {
-      src: "./src/assets/typescript.png",
+      src: "../images/typescript.png",
       alt: "TypeScript logo",
       text: "TypeScript",
     },
     {
-      src: "./src/assets/vite.png",
+      src: "../images/vite.png",
       alt: "Vite logo",
       text: "Vite",
     },
     {
-      src: "./src/assets/figma.png",
+      src: "../images/figma.png",
       alt: "Figma logo",
       text: "Figma",
     },
@@ -46,7 +46,7 @@ const App = () => {
         {/* Profile Pic */}
         <div className="bg-white md:col-span-1 md:row-span-4 rounded-lg flex justify-center items-center shadow-2xl sm:col-span-1 sm:row-span-2">
           <img
-            src="./src/assets/dan1.jpg"
+            src="../images/dan1.jpg"
             alt="Portfolio"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -136,7 +136,7 @@ const App = () => {
             rel="noopener noreferrer"
             className="border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center"
           >
-            <img src="./src/assets/facebook.png" />
+            <img src="../images/facebook.png" />
             <p className="flex items-center">Facebook</p>
           </a>
           <a
@@ -145,7 +145,7 @@ const App = () => {
             rel="noopener noreferrer"
             className="border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center"
           >
-            <img src="./src/assets/insta.png" />
+            <img src="../images/insta.png" />
             <p className="flex items-center">Instagram</p>
           </a>
           <a
@@ -154,7 +154,7 @@ const App = () => {
             rel="noopener noreferrer"
             className="border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-8 justify-center p-2 tems-center"
           >
-            <img src="./src/assets/github.png" />
+            <img src="../images/github.png" />
             <p className="flex items-center">Github</p>
           </a>
           <a
@@ -163,7 +163,7 @@ const App = () => {
             rel="noopener noreferrer"
             className="border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-8 justify-center p-2 tems-center"
           >
-            <img src="./src/assets/tik-tok.png" />
+            <img src="../images/tik-tok.png" />
             <p className="flex items-center">Tiktok</p>
           </a>
         </div>
@@ -195,10 +195,10 @@ const App = () => {
             .fill()
             .map((_, index) => {
               const images = [
-                "./src/assets/tup.png",
-                "./src/assets/rcgi.png",
-                "./src/assets/mii.png",
-                "./src/assets/jicus.jfif",
+                "../images/tup.png",
+                "../images/rcgi.png",
+                "../images/mii.png",
+                "../images/jicus.jfif",
               ];
 
               const imageNames = [
