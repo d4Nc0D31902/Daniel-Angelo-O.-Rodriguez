@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.marquee {
+  display: flex;
+  flex-direction: column; /* Change to column for vertical layout */
+  height: 300px; /* Set a height for the marquee area */
+  overflow: hidden; /* Prevents overflow of items */
+}
+
+.marquee > div {
+  display: flex; /* Keep items in a column */
+  flex-direction: column; /* Make sure items are stacked vertically */
+  animation: marquee 10s linear infinite; /* Adjust duration for speed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateY(0); /* Start at the top of the container */
+  }
+  100% {
+    transform: translateY(-100%); /* Scroll to the top of the container */
+  }
+}
