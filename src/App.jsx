@@ -20,7 +20,7 @@ const App = () => {
     { src: "../images/html.png", alt: "HTML logo", text: "HTML" },
     { src: "../images/css.png", alt: "CSS logo", text: "CSS" },
     {
-      src: "../imagess/javascript.png",
+      src: "../images/javascript.png",
       alt: "JavaScript logo",
       text: "JavaScript",
     },
