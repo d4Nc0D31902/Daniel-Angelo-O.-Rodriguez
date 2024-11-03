@@ -279,7 +279,7 @@ const Portfolio = () => {
                 <div
                   key={index}
                   className={`p-2 w-[250px] rounded-lg flex items-center gap-10 border-2 shadow-md ${
-                    isDarkTheme ? "bg-black text-white" : "bg-white text-black"
+                    isDarkTheme ? "bg-gray-800 text-white" : "bg-white text-black"
                   }`}
                 >
                   <img
@@ -334,7 +334,7 @@ const Portfolio = () => {
                     href={links[index]}
                     className="block w-full h-full"
                     target="_blank"
-                    rel="noopener noreferrer" // Adding rel attribute for security
+                    rel="noopener noreferrer" 
                   >
                     <img
                       src={images[index]}
