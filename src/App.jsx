@@ -169,7 +169,11 @@ const Portfolio = () => {
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=danielrodri1902@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center rounded-full p-2"
+                    className={`flex items-center justify-center rounded-full p-2 ${
+                      isDarkTheme
+                        ? "bg-gray-700 text-white"
+                        : "bg-blue-500 text-white"
+                    }`}
                     size="large"
                   />
                 </Tooltip>
@@ -180,10 +184,12 @@ const Portfolio = () => {
                     icon={<DownloadOutlined />}
                     href="../images/Resume.pdf"
                     download
-                    className="flex items-center justify-center rounded-full p-2"
+                    className={`flex items-center justify-center rounded-full p-2 ${
+                      isDarkTheme ? "bg-gray-700 text-white" : "#52c41a"
+                    }`}
                     style={{
-                      backgroundColor: "#52c41a",
-                      borderColor: "#52c41a",
+                      backgroundColor: isDarkTheme ? "#4a5568" : "#52c41a",
+                      borderColor: isDarkTheme ? "#4a5568" : "#52c41a",
                     }}
                     size="large"
                   />
@@ -197,7 +203,11 @@ const Portfolio = () => {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=danielrodri1902@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center rounded-full p-2"
+                  className={`flex items-center justify-center rounded-full p-2 ${
+                    isDarkTheme
+                      ? "bg-gray-700 text-white"
+                      : "bg-white text-black"
+                  }`}
                   size="large"
                 />
 
@@ -206,8 +216,13 @@ const Portfolio = () => {
                   icon={<DownloadOutlined />}
                   href="../images/Resume.pdf"
                   download
-                  className="flex items-center justify-center rounded-full p-2"
-                  style={{ backgroundColor: "#52c41a", borderColor: "#52c41a" }}
+                  className={`flex items-center justify-center rounded-full p-2 ${
+                    isDarkTheme ? "bg-gray-700 text-white" : "#52c41a"
+                  }`}
+                  style={{
+                    backgroundColor: isDarkTheme ? "#4a5568" : "#52c41a",
+                    borderColor: isDarkTheme ? "#4a5568" : "#52c41a",
+                  }}
                   size="large"
                 />
               </>
@@ -279,7 +294,9 @@ const Portfolio = () => {
                 <div
                   key={index}
                   className={`p-2 w-[250px] rounded-lg flex items-center gap-10 border-2 shadow-md ${
-                    isDarkTheme ? "bg-gray-800 text-white" : "bg-white text-black"
+                    isDarkTheme
+                      ? "bg-gray-800 text-white"
+                      : "bg-white text-black"
                   }`}
                 >
                   <img
@@ -334,7 +351,7 @@ const Portfolio = () => {
                     href={links[index]}
                     className="block w-full h-full"
                     target="_blank"
-                    rel="noopener noreferrer" 
+                    rel="noopener noreferrer"
                   >
                     <img
                       src={images[index]}
