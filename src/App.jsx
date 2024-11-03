@@ -15,8 +15,9 @@ const Portfolio = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.2);
   const audioRef = useRef(null);
-  const isNotSmallScreen = window.innerWidth > 768;
-  const [neonAnimationSpeed, setNeonAnimationSpeed] = useState(1.5);
+  const [isNotSmallScreen, setIsNotSmallScreen] = useState(
+    window.innerWidth > 768
+  );
   const toggleAudio = () => {
     if (isMuted) {
       audioRef.current.play();
@@ -65,6 +66,16 @@ const Portfolio = () => {
     { src: "../images/figma.png", alt: "Figma logo", text: "Figma" },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsNotSmallScreen(window.innerWidth > 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className={`h-screen ${
@@ -74,7 +85,7 @@ const Portfolio = () => {
       } p-5`}
     >
       <audio ref={audioRef} src="../mp3/bgmusic.mp3" autoPlay loop />
-      <div className="grid md:grid-cols-4 md:grid-rows-4 p-2 h-[100%] gap-2 sm:grid-cols-2 sm:grid-rows-3">
+      <div className="grid md:grid-cols-4 md:grid-rows-4 p-2 h-[100%] gap-2 sm:grid-cols-2 sm:grid-rows-3 xs:grid-cols-1 xs:grid-rows-2">
         {/* Theme Toggle Button */}
 
         {/* Profile Pic */}
@@ -148,9 +159,9 @@ const Portfolio = () => {
               />
             ) : (
               <p
-                className={`mt-2 ${
+                className={`mt-2  ${
                   isDarkTheme ? "text-gray-300" : "text-gray-700"
-                } text-xs`}
+                } text-md`}
               >
                 a passionate developer with a love for coding. I thrive on
                 tackling new challenges and continuously expanding my skills in
