@@ -4,22 +4,46 @@
 
 .marquee {
   display: flex;
-  flex-direction: column; /* Change to column for vertical layout */
-  height: 300px; /* Set a height for the marquee area */
-  overflow: hidden; /* Prevents overflow of items */
+  flex-direction: column;
+  height: 300px;
+  overflow: hidden;
 }
 
 .marquee > div {
-  display: flex; /* Keep items in a column */
-  flex-direction: column; /* Make sure items are stacked vertically */
-  animation: marquee 10s linear infinite; /* Adjust duration for speed */
+  display: flex;
+  flex-direction: column;
+  animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
   0% {
-    transform: translateY(0); /* Start at the top of the container */
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%); /* Scroll to the top of the container */
+    transform: translateY(-100%);
+  }
+}
+
+.neon-border {
+  position: relative;
+  border-radius: 12px;
+  animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.8), 0 0 12px rgba(255, 215, 0, 0.6),
+      0 0 18px rgba(255, 215, 0, 0.4), 0 0 24px rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 215, 0, 1), 0 0 24px rgba(255, 215, 0, 0.8),
+      0 0 36px rgba(255, 215, 0, 0.6), 0 0 48px rgba(255, 215, 0, 0.4);
+    border: 2px solid rgba(255, 215, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.8), 0 0 12px rgba(255, 215, 0, 0.6),
+      0 0 18px rgba(255, 215, 0, 0.4), 0 0 24px rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.7);
   }
 }
