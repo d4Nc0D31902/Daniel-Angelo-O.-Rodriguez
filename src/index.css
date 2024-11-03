@@ -47,3 +47,11 @@
     border: 2px solid rgba(255, 215, 0, 0.7);
   }
 }
+
+.scale-hover {
+  transition: transform 0.2s; /* Smooth transition */
+}
+
+.scale-hover:hover {
+  transform: scale(1.05); /* Scale up to 105% */
+}

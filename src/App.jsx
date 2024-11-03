@@ -240,7 +240,7 @@ const Portfolio = () => {
             href="https://www.facebook.com/danielangelo.rodriguez.2002/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center ${
+            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center scale-hover ${
               isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
             }`}
           >
@@ -251,7 +251,7 @@ const Portfolio = () => {
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center ${
+            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center scale-hover ${
               isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
             }`}
           >
@@ -262,9 +262,10 @@ const Portfolio = () => {
             href="https://github.com/d4Nc0D31902"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center ${
-              isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-            }`}
+            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center 
+              scale-hover ${
+                isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
+              }`}
           >
             <img src="../images/github.png" />
             <p className="flex items-center">Github</p>
@@ -273,9 +274,10 @@ const Portfolio = () => {
             href="https://www.tiktok.com/@daniel.angelo.rod?is_from_webapp=1&sender_device=pc"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center ${
-              isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-            }`}
+            className={`border-2 shadow-md rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center
+              scale-hover ${
+                isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
+              }`}
           >
             <img src="../images/tik-tok.png" />
             <p className="flex items-center">Tiktok</p>
