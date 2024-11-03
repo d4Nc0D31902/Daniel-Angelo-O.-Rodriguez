@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button, Tooltip } from "antd";
 import {
   MailOutlined,
@@ -13,9 +13,10 @@ import Typing from "react-typing-effect";
 const Portfolio = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0.2);
   const audioRef = useRef(null);
   const isNotSmallScreen = window.innerWidth > 768;
+  const [neonAnimationSpeed, setNeonAnimationSpeed] = useState(1.5);
   const toggleAudio = () => {
     if (isMuted) {
       audioRef.current.play();
@@ -34,6 +35,12 @@ const Portfolio = () => {
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
   };
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [audioRef, volume]);
 
   const items = [
     { src: "../images/mongodb.png", alt: "MongoDB logo", text: "MongoDB" },
@@ -62,8 +69,8 @@ const Portfolio = () => {
     <div
       className={`h-screen ${
         isDarkTheme
-          ? "bg-gradient-to-r from-black to-gray-600"
-          : "bg-gradient-to-r from-white to-gray-300"
+          ? "bg-gradient-to-r from-black to-gray-800"
+          : "bg-gradient-to-r from-white to-gray-600"
       } p-5`}
     >
       <audio ref={audioRef} src="../mp3/bgmusic.mp3" autoPlay loop />
@@ -73,7 +80,7 @@ const Portfolio = () => {
         {/* Profile Pic */}
         <div
           className={`bg-white md:col-span-1 md:row-span-4 rounded-lg flex justify-center items-center shadow-2xl sm:col-span-1 sm:row-span-2 relative group neon-border ${
-            isDarkTheme ? "bg-gray-800" : "bg-white"
+            isDarkTheme ? "bg-black" : "bg-white"
           }`}
         >
           {/* Theme Toggle Button */}
@@ -121,7 +128,7 @@ const Portfolio = () => {
         {/* Description */}
         <div
           className={`md:col-span-2 md:row-span-2 rounded-lg p-4 flex flex-col justify-center items-start shadow-lg space-y-4 ${
-            isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
+            isDarkTheme ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
           <div className="w-full h-full">
@@ -211,7 +218,7 @@ const Portfolio = () => {
         {/* Socials */}
         <div
           className={`shadow-lg md:col-span-1 md:row-span-2 rounded-lg p-2 flex justify-center flex-col gap-2 items-center ${
-            isDarkTheme ? "bg-gray-800" : "bg-white"
+            isDarkTheme ? "bg-black" : "bg-white"
           }`}
         >
           <a
@@ -262,8 +269,8 @@ const Portfolio = () => {
 
         {/* Marquee */}
         <div
-          className={`bg-white shadow-lg md:col-span-1 md:row-span-2 rounded-lg p-2 flex justify-center items-center overflow-hidden relative ${
-            isDarkTheme ? "bg-gray-800" : "bg-white"
+          className={` shadow-lg md:col-span-1 md:row-span-2 rounded-lg p-2 flex justify-center items-center overflow-hidden relative ${
+            isDarkTheme ? "bg-black" : "bg-white"
           }`}
         >
           <div className="marquee gap-y-5">
@@ -272,9 +279,7 @@ const Portfolio = () => {
                 <div
                   key={index}
                   className={`p-2 w-[250px] rounded-lg flex items-center gap-10 border-2 shadow-md ${
-                    isDarkTheme
-                      ? "bg-gray-700 text-white"
-                      : "bg-white text-black"
+                    isDarkTheme ? "bg-black text-white" : "bg-white text-black"
                   }`}
                 >
                   <img
@@ -292,7 +297,7 @@ const Portfolio = () => {
         {/* Works */}
         <div
           className={`md:col-span-2 md:row-span-2 rounded-lg p-4 flex justify-center items-center gap-4 flex-wrap overflow-auto ${
-            isDarkTheme ? "bg-gray-800" : "bg-white"
+            isDarkTheme ? "bg-black" : "bg-white"
           } shadow-lg hover:shadow-xl transition-shadow duration-300`}
         >
           {Array(4)
