@@ -85,10 +85,7 @@ const Portfolio = () => {
       } p-5`}
     >
       <audio ref={audioRef} src="../mp3/bgmusic.mp3" autoPlay loop />
-      <div
-        className="grid desktop:grid-cols-4 desktop:grid-rows-4 tablets:grid-cols-3 tablets:grid-rows-2 phones:grid-cols-2 phones:grid-rows-3 iphone:grid-cols-1 iphone:grid-rows-1 p-2 h-[100%] gap-2 
-      "
-      >
+      <div className="grid desktop:grid-cols-4 desktop:grid-rows-4 tablets:grid-cols-3 tablets:grid-rows-2 phones:grid-cols-2 phones:grid-rows-3 iphone:grid-cols-1 iphone:grid-rows-1 p-2 h-[100%] gap-2 ">
         {/* Theme Toggle Button */}
 
         {/* Profile Pic */}
@@ -252,7 +249,7 @@ const Portfolio = () => {
 
         {/* Socials */}
         <div
-          className={`shadow-lg desktop:col-span-1 desktop:row-span-2 rounded-lg p-2 flex justify-center flex-col gap-2 items-center ${
+          className={`shadow-lg desktop:col-span-1 desktop:row-span-2 rounded-lg p-2 flex justify-center flex-col gap-2 items-center phones: overflow-auto ${
             isDarkTheme ? "bg-black" : "bg-white"
           }`}
         >
@@ -260,47 +257,61 @@ const Portfolio = () => {
             href="https://www.facebook.com/danielangelo.rodriguez.2002/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center scale-hover ${
+            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 items-center scale-hover ${
               isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-            }`}
+            } iphone:w-[90%] iphone:h-auto iphone:gap-3`}
           >
-            <img src="../images/facebook.png" />
-            <p className="flex items-center">Facebook</p>
+            <img
+              src="../images/facebook.png"
+              className="w-6 h-6 iphone:w-8 iphone:h-8"
+            />
+            <p className="flex items-center text-sm iphone:text-base">
+              Facebook
+            </p>
           </a>
           <a
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center scale-hover ${
+            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 items-center scale-hover ${
               isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-            }`}
+            } iphone:w-[90%] iphone:h-auto iphone:gap-3`}
           >
-            <img src="../images/insta.png" />
-            <p className="flex items-center">Instagram</p>
+            <img
+              src="../images/insta.png"
+              className="w-6 h-6 iphone:w-8 iphone:h-8"
+            />
+            <p className="flex items-center text-sm iphone:text-base">
+              Instagram
+            </p>
           </a>
           <a
             href="https://github.com/d4Nc0D31902"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center 
-              scale-hover ${
-                isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-              }`}
+            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 items-center scale-hover ${
+              isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
+            } iphone:w-[90%] iphone:h-auto iphone:gap-3`}
           >
-            <img src="../images/github.png" />
-            <p className="flex items-center">Github</p>
+            <img
+              src="../images/github.png"
+              className="w-6 h-6 iphone:w-8 iphone:h-8"
+            />
+            <p className="flex items-center text-sm iphone:text-base">Github</p>
           </a>
           <a
             href="https://www.tiktok.com/@daniel.angelo.rod?is_from_webapp=1&sender_device=pc"
             target="_blank"
             rel="noopener noreferrer"
-            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 tems-center
-              scale-hover ${
-                isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
-              }`}
+            className={`border-2 shadow-lg rounded-lg w-[80%] h-[20%] flex gap-5 justify-center p-2 items-center scale-hover ${
+              isDarkTheme ? "bg-gray-700 text-white" : "bg-white text-black"
+            } iphone:w-[90%] iphone:h-auto iphone:gap-3`}
           >
-            <img src="../images/tik-tok.png" />
-            <p className="flex items-center">Tiktok</p>
+            <img
+              src="../images/tik-tok.png"
+              className="w-6 h-6 iphone:w-8 iphone:h-8"
+            />
+            <p className="flex items-center text-sm iphone:text-base">Tiktok</p>
           </a>
         </div>
 
